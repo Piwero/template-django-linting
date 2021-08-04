@@ -159,7 +159,7 @@ python-versions = "*"
 
 [[package]]
 name = "flake9"
-version = "3.8.3"
+version = "3.8.3.post2"
 description = "the modular source code checker: pep8 pyflakes and co"
 category = "dev"
 optional = false
@@ -583,7 +583,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "d9cc14a81f922da0ee828bf3710cfa7e41d9f16f63d4b1dcdc4e2223aafb2cbb"
+content-hash = "ca946cc0f176c0aa7cb350d52fcfead11c96c8feb51e368a49a1b5c962efaca6"
 
 [metadata.files]
 appdirs = [
@@ -647,8 +647,8 @@ filelock = [
     {file = "filelock-3.0.12.tar.gz", hash = "sha256:18d82244ee114f543149c66a6e0c14e9c4f8a1044b5cdaadd0f82159d6a6ff59"},
 ]
 flake9 = [
-    {file = "flake9-3.8.3-py2.py3-none-any.whl", hash = "sha256:26fe5d6cf537f4d51f0e687f962f3552933fef07c6609ed8e8f9d4507f309459"},
-    {file = "flake9-3.8.3.tar.gz", hash = "sha256:20a1d5ec91ba3a9dbb40f9687a0aeb96f913ea58e0f1bc1ae96757dcf9563caa"},
+    {file = "flake9-3.8.3.post2-py3-none-any.whl", hash = "sha256:47dced969a802a8892740bcaa35ae07232709b2ade803c45f48dd03ccb7f825f"},
+    {file = "flake9-3.8.3.post2.tar.gz", hash = "sha256:daefdbfb3d320eb215a4a52c62a4b4a027cbe11d39f5dab30df908b40fce5ba7"},
 ]
 identify = [
     {file = "identify-2.2.12-py2.py3-none-any.whl", hash = "sha256:a510cbe155f39665625c8a4c4b4f9360cbce539f51f23f47836ab7dd852db541"},
