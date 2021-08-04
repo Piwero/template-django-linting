@@ -1,1 +1,1 @@
-# task-tile-app
+# Django project
