@@ -131,7 +131,7 @@ python-versions = "*"
 
 [[package]]
 name = "django"
-version = "3.2.8"
+version = "3.2.9"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -588,7 +588,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "57135b4d0d43b1434c0e6bcd89cc8b5dc97ebefe1151093726a87d94a5211ecf"
+content-hash = "eeb8d2de9ee274bb1cb6888e7b05648b6feacdd7a5ae1abab915f61bc875f008"
 
 [metadata.files]
 appnope = [
@@ -640,8 +640,8 @@ distlib = [
     {file = "distlib-0.3.2.zip", hash = "sha256:106fef6dc37dd8c0e2c0a60d3fca3e77460a48907f335fa28420463a6f799736"},
 ]
 django = [
-    {file = "Django-3.2.8-py3-none-any.whl", hash = "sha256:42573831292029639b798fe4d3812996bfe4ff3275f04566da90764daec011a5"},
-    {file = "Django-3.2.8.tar.gz", hash = "sha256:f6d2c4069c9b9bfac03bedff927ea1f9e0d29e34525cec8a68fd28eb2a8df7af"},
+    {file = "Django-3.2.9-py3-none-any.whl", hash = "sha256:e22c9266da3eec7827737cde57694d7db801fedac938d252bf27377cec06ed1b"},
+    {file = "Django-3.2.9.tar.gz", hash = "sha256:51284300f1522ffcdb07ccbdf676a307c6678659e1284f0618e5a774127a6a08"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
@@ -760,6 +760,7 @@ pytest = [
 ]
 python-decouple = [
     {file = "python-decouple-3.5.tar.gz", hash = "sha256:68e4b3fcc97e24bc90eecc514852d0bf970f4ff031f5f7a6728ddafa9afefcaf"},
+    {file = "python_decouple-3.5-py3-none-any.whl", hash = "sha256:011d3f785367c54a72cf8a07d3a7a48bb8cc1a0f8e6c70353ca5767ebf7c8c9d"},
 ]
 pytz = [
     {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},
