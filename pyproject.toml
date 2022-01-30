@@ -36,7 +36,7 @@ python-decouple = "^3.5"
 Django = "^3.2.10"
 
 [tool.poetry.dev-dependencies]
-black = "^21.12b0"
+black = "^22.1"
 ipdb = "^0.13.9"
 isort = "^5.10.1"
 flake9 = "3.8.3.post2"
