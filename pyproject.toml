@@ -33,7 +33,7 @@ authors = ["Piwero <piwero@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 python-decouple = "^3.5"
-Django = "^3.2.10"
+Django = "^3.2.11"
 
 [tool.poetry.dev-dependencies]
 black = "^22.1"
