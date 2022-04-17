@@ -126,7 +126,7 @@ python-versions = "*"
 
 [[package]]
 name = "django"
-version = "4.0.3"
+version = "4.0.4"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -575,7 +575,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "d122c3f072f38e081efec1f8126620348dbd14e58757c5494f9dcaa9a47ff254"
+content-hash = "791e9f5be6fbb19438a8441feea87edc8659acbf87390dba48cfc5c39cd87cf2"
 
 [metadata.files]
 appnope = [
@@ -648,8 +648,8 @@ distlib = [
     {file = "distlib-0.3.2.zip", hash = "sha256:106fef6dc37dd8c0e2c0a60d3fca3e77460a48907f335fa28420463a6f799736"},
 ]
 django = [
-    {file = "Django-4.0.3-py3-none-any.whl", hash = "sha256:1239218849e922033a35d2a2f777cb8bee18bd725416744074f455f34ff50d0c"},
-    {file = "Django-4.0.3.tar.gz", hash = "sha256:77ff2e7050e3324c9b67e29b6707754566f58514112a9ac73310f60cd5261930"},
+    {file = "Django-4.0.4-py3-none-any.whl", hash = "sha256:07c8638e7a7f548dc0acaaa7825d84b7bd42b10e8d22268b3d572946f1e9b687"},
+    {file = "Django-4.0.4.tar.gz", hash = "sha256:4e8177858524417563cc0430f29ea249946d831eacb0068a1455686587df40b5"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
