@@ -8,14 +8,14 @@ python-versions = "*"
 
 [[package]]
 name = "asgiref"
-version = "3.4.1"
+version = "3.5.2"
 description = "ASGI specs, helper code, and adapters"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.extras]
-tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
+tests = ["mypy (>=0.800)", "pytest-asyncio", "pytest"]
 
 [[package]]
 name = "atomicwrites"
@@ -34,10 +34,10 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.extras]
-dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit"]
-docs = ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
-tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
+tests_no_zope = ["pytest-mypy-plugins", "mypy", "six", "pytest (>=4.3.0)", "pympler", "hypothesis", "coverage[toml] (>=5.0.2)"]
+tests = ["zope.interface", "pytest-mypy-plugins", "mypy", "six", "pytest (>=4.3.0)", "pympler", "hypothesis", "coverage[toml] (>=5.0.2)"]
+docs = ["sphinx-notfound-page", "zope.interface", "sphinx", "furo"]
+dev = ["pre-commit", "sphinx-notfound-page", "sphinx", "furo", "zope.interface", "pytest-mypy-plugins", "mypy", "six", "pytest (>=4.3.0)", "pympler", "hypothesis", "coverage[toml] (>=5.0.2)"]
 
 [[package]]
 name = "backcall"
@@ -76,10 +76,10 @@ tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
 typing-extensions = {version = ">=3.10.0.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
-colorama = ["colorama (>=0.4.3)"]
-d = ["aiohttp (>=3.7.4)"]
-jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
+jupyter = ["tokenize-rt (>=3.2.0)", "ipython (>=7.8.0)"]
+d = ["aiohttp (>=3.7.4)"]
+colorama = ["colorama (>=0.4.3)"]
 
 [[package]]
 name = "cfgv"
@@ -126,20 +126,20 @@ python-versions = "*"
 
 [[package]]
 name = "django"
-version = "4.0.6"
+version = "4.1"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
 python-versions = ">=3.8"
 
 [package.dependencies]
-asgiref = ">=3.4.1,<4"
+asgiref = ">=3.5.2,<4"
 sqlparse = ">=0.2.2"
 tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 
 [package.extras]
-argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
+argon2 = ["argon2-cffi (>=19.1.0)"]
 
 [[package]]
 name = "filelock"
@@ -216,15 +216,15 @@ pygments = "*"
 traitlets = ">=4.2"
 
 [package.extras]
-all = ["Sphinx (>=1.3)", "ipykernel", "ipyparallel", "ipywidgets", "nbconvert", "nbformat", "nose (>=0.10.1)", "notebook", "numpy (>=1.17)", "pygments", "qtconsole", "requests", "testpath"]
-doc = ["Sphinx (>=1.3)"]
-kernel = ["ipykernel"]
-nbconvert = ["nbconvert"]
-nbformat = ["nbformat"]
-notebook = ["notebook", "ipywidgets"]
-parallel = ["ipyparallel"]
+test = ["numpy (>=1.17)", "ipykernel", "nbformat", "pygments", "testpath", "requests", "nose (>=0.10.1)"]
 qtconsole = ["qtconsole"]
-test = ["nose (>=0.10.1)", "requests", "testpath", "pygments", "nbformat", "ipykernel", "numpy (>=1.17)"]
+parallel = ["ipyparallel"]
+notebook = ["ipywidgets", "notebook"]
+nbformat = ["nbformat"]
+nbconvert = ["nbconvert"]
+kernel = ["ipykernel"]
+doc = ["Sphinx (>=1.3)"]
+all = ["testpath", "requests", "qtconsole", "pygments", "numpy (>=1.17)", "notebook", "nose (>=0.10.1)", "nbformat", "nbconvert", "ipywidgets", "ipyparallel", "ipykernel", "Sphinx (>=1.3)"]
 
 [[package]]
 name = "ipython-genutils"
@@ -243,10 +243,10 @@ optional = false
 python-versions = ">=3.6.1,<4.0"
 
 [package.extras]
-pipfile_deprecated_finder = ["pipreqs", "requirementslib"]
-requirements_deprecated_finder = ["pipreqs", "pip-api"]
-colors = ["colorama (>=0.4.3,<0.5.0)"]
 plugins = ["setuptools"]
+colors = ["colorama (>=0.4.3,<0.5.0)"]
+requirements_deprecated_finder = ["pip-api", "pipreqs"]
+pipfile_deprecated_finder = ["requirementslib", "pipreqs"]
 
 [[package]]
 name = "jedi"
@@ -260,8 +260,8 @@ python-versions = ">=3.6"
 parso = ">=0.8.0,<0.9.0"
 
 [package.extras]
-qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
-testing = ["Django (<3.1)", "colorama", "docopt", "pytest (<6.0.0)"]
+testing = ["pytest (<6.0.0)", "docopt", "colorama", "Django (<3.1)"]
+qa = ["mypy (==0.782)", "flake8 (==3.8.3)"]
 
 [[package]]
 name = "matplotlib-inline"
@@ -318,8 +318,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
-testing = ["docopt", "pytest (<6.0.0)"]
+testing = ["pytest (<6.0.0)", "docopt"]
+qa = ["mypy (==0.782)", "flake8 (==3.8.3)"]
 
 [[package]]
 name = "pathspec"
@@ -369,7 +369,7 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.extras]
-dev = ["pre-commit", "tox"]
+dev = ["tox", "pre-commit"]
 
 [[package]]
 name = "pre-commit"
@@ -465,7 +465,7 @@ py = ">=1.8.2"
 tomli = ">=1.0.0"
 
 [package.extras]
-testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
+testing = ["xmlschema", "requests", "pygments (>=2.7.2)", "nose", "mock", "hypothesis (>=3.56)", "argcomplete"]
 
 [[package]]
 name = "python-decouple"
@@ -561,8 +561,8 @@ platformdirs = ">=2,<3"
 six = ">=1.9.0,<2"
 
 [package.extras]
-docs = ["proselint (>=0.10.2)", "sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sphinx-rtd-theme (>=0.4.3)", "towncrier (>=19.9.0rc1)"]
-testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", "pytest (>=4)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.1)", "pytest-mock (>=2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "packaging (>=20.0)"]
+testing = ["packaging (>=20.0)", "pytest-timeout (>=1)", "pytest-randomly (>=1)", "pytest-mock (>=2)", "pytest-freezegun (>=0.4.1)", "pytest-env (>=0.6.2)", "pytest (>=4)", "flaky (>=3)", "coverage-enable-subprocess (>=1)", "coverage (>=4)"]
+docs = ["towncrier (>=19.9.0rc1)", "sphinx-rtd-theme (>=0.4.3)", "sphinx-argparse (>=0.2.5)", "sphinx (>=3)", "proselint (>=0.10.2)"]
 
 [[package]]
 name = "wcwidth"
@@ -575,7 +575,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "22105da21409091e24ea27d071de33843bc328e55e77c3812752f44a16e47095"
+content-hash = "9ec86c8ccffcd3c8e5988b83ee7cd003946494ccf93cf26c08b57ce691c21a68"
 
 [metadata.files]
 appnope = [
@@ -583,8 +583,8 @@ appnope = [
     {file = "appnope-0.1.2.tar.gz", hash = "sha256:dd83cd4b5b460958838f6eb3000c660b1f9caf2a5b1de4264e941512f603258a"},
 ]
 asgiref = [
-    {file = "asgiref-3.4.1-py3-none-any.whl", hash = "sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214"},
-    {file = "asgiref-3.4.1.tar.gz", hash = "sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9"},
+    {file = "asgiref-3.5.2-py3-none-any.whl", hash = "sha256:1d2880b792ae8757289136f1db2b7b99100ce959b2aa57fd69dab783d05afac4"},
+    {file = "asgiref-3.5.2.tar.gz", hash = "sha256:4a29362a6acebe09bf1d6640db38c1dc3d9217c68e6f9f6204d72667fc19a424"},
 ]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
@@ -648,8 +648,8 @@ distlib = [
     {file = "distlib-0.3.2.zip", hash = "sha256:106fef6dc37dd8c0e2c0a60d3fca3e77460a48907f335fa28420463a6f799736"},
 ]
 django = [
-    {file = "Django-4.0.6-py3-none-any.whl", hash = "sha256:ca54ebedfcbc60d191391efbf02ba68fb52165b8bf6ccd6fe71f098cac1fe59e"},
-    {file = "Django-4.0.6.tar.gz", hash = "sha256:a67a793ff6827fd373555537dca0da293a63a316fe34cb7f367f898ccca3c3ae"},
+    {file = "Django-4.1-py3-none-any.whl", hash = "sha256:031ccb717782f6af83a0063a1957686e87cb4581ea61b47b3e9addf60687989a"},
+    {file = "Django-4.1.tar.gz", hash = "sha256:032f8a6fc7cf05ccd1214e4a2e21dfcd6a23b9d575c6573cacc8c67828dbe642"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
